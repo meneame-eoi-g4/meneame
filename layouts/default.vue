@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import mainNav from "@components/mainNav";
+import mainNav from "@/components/mainNav";
 export default {
   data() {
     return {};

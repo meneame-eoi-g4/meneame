@@ -10,7 +10,7 @@
  />
   </div >
   <div class="form-group">
-  
+
   <div class="form-group">
   <input
     v-model="email"
@@ -28,15 +28,15 @@
           placeholder="Password"
           autocomplete="disabled"
       />
-    </div>   
+    </div>
     <div class="form-group">
       <label class="checkbox">
         <input type="checkbox" v-model="legalAcceptance">
           Acepto los términos y condiciones legales
       </label>
-    </div>  
-     <button class="button is-warning" @click="login">Registrate</button>                
-
+    </div>
+     <button class="button is-warning" @click="login">Registrate</button>
+</div >
 </div >
 </template>
 
@@ -44,7 +44,7 @@
 
 export default {
   name: "RegisterPage",
- 
+
   head(){
     return {
       title: 'Regístrate'
@@ -62,27 +62,27 @@ export default {
    methods: {
     async login() {
       try {
-   
-       
+
+
 
         const newUser = {
           firstname: this.firstname,
-         
+
           profile : 'user',
           email: this.email,
           password: this.password,
           avatar: 'https://img2.freepng.es/20180616/sxr/kisspng-avatar-computer-icons-avatar-icon-5b254abb7cf344.7556131215291706195118.jpg'
-          
+
         }
         validForm()
          console.log(newUser)
        await this.$api.register.register(newUser)
-       
 
-      
+
+
 
          this.$router.push("/bienvenido")
-        
+
       } catch (error) {
         this.errorMessage = error.message
         this.hasErrors = true
@@ -101,6 +101,6 @@ export default {
         throw new Error('Introduce la contraseña')
       }
     }
-  
-}; 
+
+};
 </script>
