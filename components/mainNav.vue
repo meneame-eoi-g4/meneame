@@ -78,11 +78,14 @@ export default {
     currentUser() {
       return this.$store.getters.currentUser
     },
-    logout() {
+  },
+  methods: {
+      logout() {
       this.$store.dispatch('logout')
 
       this.$router.push("/")
     }
   },
-};
+  
+  };
 </script>
