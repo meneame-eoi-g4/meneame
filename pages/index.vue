@@ -1,5 +1,5 @@
 <template>
-  
+   <main-wall :articles="articles"/>
 </template>
 
 <script>
