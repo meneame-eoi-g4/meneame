@@ -38,7 +38,7 @@ export const actions = {
       /* this.$cookies.set('jwt-token', token) */
 
       //configuro axios
-      /this.$api.initSession(token) 
+      this.$api.initSession(token) 
     }
 
     context.commit('saveToken', token)

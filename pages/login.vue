@@ -52,7 +52,7 @@ export default {
 
         this.$store.dispatch("login", token);
 
-        this.$router.push("/mis-pedidos");
+        this.$router.push("/");
       } catch (error) {
         this.errorMessage = error.message;
         this.hasErrors = true;

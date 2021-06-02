@@ -14,6 +14,26 @@ class Article{
             throw error
         }
     }
+    async like(article){
+        try {
+            
+            const response = await this.axios.put(`articles/${article._id}`,article);
+            return response.data
+        } catch (error) {
+            
+        }
+
+    }
+    async dislike(article){
+        try {
+            const response = await this.axios.put(`articles/${article._id}`);
+            return response.data
+            
+        } catch (error) {
+            
+        }
+
+    }
 
     async send(ArticleData){
         try {
