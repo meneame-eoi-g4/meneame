@@ -43,9 +43,9 @@
           <nuxt-link class="button is-primary"  v-if="!isAuth" to="/registro">
             <strong>Crear cuenta</strong>
           </nuxt-link>
-          <a v-if="!isAuth" class="button is-light"  to="/login">
+          <nuxt-link v-if="!isAuth" class="button is-light"  to="/login">
             Log in
-          </a>
+          </nuxt-link>
         </div>
       </div>
     </div>

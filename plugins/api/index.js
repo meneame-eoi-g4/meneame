@@ -9,7 +9,6 @@ export default (context, inject) => {
   inject('api', {
     messages: new Messages(axios),
     auth: new Auth(axios),
-   
     articles: new Article(axios),
     register : new Register(axios),
     initSession(token = null){
