@@ -33,11 +33,7 @@ export const actions = {
   }, */
   login(context, token){
     if(token !== null){
-<<<<<<< HEAD
-    localStorage.setItem("jwt-token", token)
-=======
       localStorage.setItem("jwt-token", token)
->>>>>>> 1027e923d4141c7cc66e05c391c2830f923145a3
 
       /* this.$cookies.set('jwt-token', token) */
 
