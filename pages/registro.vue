@@ -1,25 +1,4 @@
 <template>
-<<<<<<< HEAD
-<div >
-  <div class="form-group">
-    <input
-    v-model="firstname"
-    type="text"
-    class="form-control"
-    placeholder="Pon tu nombre"
-    @blur="hasErrors=false"
- />
-  </div >
-  <div class="form-group">
-    <input
-    v-model="lastname"
-    type="text"
-    class="form-control"
-    placeholder="Pon tu apellido"
-    @blur="hasErrors=false"
- />
-  </div >
-=======
   <div>
     <div class="form-group">
       <input
@@ -39,7 +18,6 @@
         @blur="hasErrors = false"
       />
     </div>
->>>>>>> 85e088c9823a4130df97219ff37ab158bc432c38
 
     <div class="form-group">
       <input
@@ -91,30 +69,7 @@ export default {
   methods: {
     async login() {
       try {
-
-
-
-        console.log('boton pulsado')
-        const newUser = {
-          firstname: this.firstname,
-          lastname:this.lastname,
-
-         
-          email: this.email,
-          password: this.password,
-          avatar: 'https://img2.freepng.es/20180616/sxr/kisspng-avatar-computer-icons-avatar-icon-5b254abb7cf344.7556131215291706195118.jpg'
-
-        }
-       
-         console.log(newUser)
-       await this.$api.register.register(newUser)
-
-
-
-
-         this.$router.push("/index")
-
-
+        console.log("boton pulsado");
         const newUser = {
           firstname: this.firstname,
           lastname: this.lastname,
@@ -123,12 +78,10 @@ export default {
           avatar:
             "https://img2.freepng.es/20180616/sxr/kisspng-avatar-computer-icons-avatar-icon-5b254abb7cf344.7556131215291706195118.jpg",
         };
-        /* validForm(); */
-        console.log(newUser);
+
         await this.$api.register.register(newUser);
 
-        this.$router.push("/bienvenido");
->>>>>>> 85e088c9823a4130df97219ff37ab158bc432c38
+        this.$router.push("/index");
       } catch (error) {
         this.errorMessage = error.message;
         this.hasErrors = true;

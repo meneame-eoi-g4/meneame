@@ -33,12 +33,12 @@ export const actions = {
   }, */
   login(context, token){
     if(token !== null){
-      //localStorage.setItem("jwt-token", token)
+      localStorage.setItem("jwt-token", token)
 
-      this.$cookies.set('jwt-token', token)
+      /* this.$cookies.set('jwt-token', token) */
 
       //configuro axios
-      this.$api.initSession(token)
+      /* this.$api.initSession(token) */
     }
 
     context.commit('saveToken', token)

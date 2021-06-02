@@ -5,7 +5,9 @@ class Article{
 
     async list(){
         try {
-            const response = await this.axios.get("Articles");
+
+            const response = await this.axios.get("articles");
+            console.log(response)
 
             return response.data
         }catch(error){
@@ -15,7 +17,7 @@ class Article{
 
     async send(ArticleData){
         try {
-            const response = await this.axios.post("Articles", ArticleData)
+            const response = await this.axios.post("articles", ArticleData)
 
             return response.data
         }catch(error){

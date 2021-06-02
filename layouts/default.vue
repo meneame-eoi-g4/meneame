@@ -15,8 +15,8 @@ export default {
     mainNav,
   },
   mounted() {
-    //const token = localStorage.getItem('jwt-token')
-    const token = this.$cookies.get("jwt-token");
+    const token = localStorage.getItem('jwt-token')
+    /* const token = this.$cookies.get("jwt-token"); */
 
     this.$store.dispatch("login", token);
   },
