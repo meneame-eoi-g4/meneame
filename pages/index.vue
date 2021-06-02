@@ -3,11 +3,12 @@
 </template>
 
 <script>
+import mainWall from '~/components/mainWall.vue';
 
 export default {
   name: "HomePage",
   components: {
-   
+    mainWall
   },
   head(){
     return {
@@ -15,7 +16,6 @@ export default {
     }
   },
   async asyncData(context){
-    console.info("AsyncData")
     try {
       const articles = await context.app.$api.articles.list();
 
