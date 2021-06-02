@@ -25,14 +25,14 @@
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          
+
         </a>
 
         <div class="navbar-dropdown">
           <a class="navbar-item">
-          
+
           </a>
-        
+
         </div>
       </div>
     </div>
@@ -40,9 +40,9 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary"  v-if="!isAuth" to="/registro">
+          <nuxt-link class="button is-primary"  v-if="!isAuth" to="/registro">
             <strong>Crear cuenta</strong>
-          </a>
+          </nuxt-link>
           <a v-if="!isAuth" class="button is-light"  to="/login">
             Log in
           </a>
@@ -65,7 +65,7 @@ export default {
     isAuth() {
       return this.$store.getters.isAuth
     },
-    
+
     currentUser() {
       return this.$store.getters.currentUser
     },

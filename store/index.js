@@ -1,7 +1,7 @@
 import jwtDecode from 'jwt-decode'
 
 export const state = () => ({
-  
+
   token: null,
   user: null
 })
@@ -21,7 +21,7 @@ export const mutations ={
 export const actions = {
   //primer parámetro contexto de VUEX
   //segundo parámetro contexto de NUXT
-  nuxtServerInit(ctx, {app}){
+/*   nuxtServerInit(ctx, {app}){
 
     //sacamos la cookie de la petición
     const cookieToken = app.$cookies.get('jwt-token')
@@ -30,7 +30,7 @@ export const actions = {
       //iniciar el store con la sesión el usuario
       ctx.dispatch('login',cookieToken)
     }
-  },
+  }, */
   login(context, token){
     if(token !== null){
       //localStorage.setItem("jwt-token", token)
