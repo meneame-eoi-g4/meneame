@@ -4,7 +4,7 @@ import Article from './resources/articles'
 import Register from './resources/register'
 import Messages from './resources/messages'
 export default (context, inject) => {
-  axios.defaults.baseURL = context.env.baseURL
+axios.defaults.baseURL = context.env.baseURL
 
   inject('api', {
     messages: new Messages(axios),
