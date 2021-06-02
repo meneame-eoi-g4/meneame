@@ -4,7 +4,7 @@
       <div class="control is-expanded">
         <div class="select is-fullwidth">
           <select name="categoria" v-model="categoria">
-            <option value="cosas">cosas</option>
+            <option value="Cosas">Cosas</option>
           </select>
         </div>
       </div>
@@ -81,7 +81,7 @@ export default {
         console.log(newPost);
         await this.$api.articles.send(newPost);
 
-        this.$router.push("/index");
+        this.$router.push("/");
       } catch (error) {
         this.errorMessage = error.message;
         this.hasErrors = true;

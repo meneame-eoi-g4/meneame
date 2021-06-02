@@ -11,28 +11,13 @@
       {{value.content}}
     
       <br>
-      <time datetime="2016-1-1">{{value.date}}</time>
+      <time datetime="2016-1-1">{{value.published_at}}</time>
     </div>
   </div>
   <footer class="card-footer">
-    <span class="icon-text">
-  <span class="icon">
-    <i class="fa-solid fa-thumbs-up"></i>
-  </span>
-  
-</span>
-    <span class="icon-text">
-  <span class="icon">
-    <i class="fa-solid fa-thumbs-down"></i>
-  </span>
-  
-</span>
-    <span class="icon-text">
-  <span class="icon">
-    <i class="fa-solid fa-comment-pen"></i>
-  </span>
-  
-</span>
+   <a @click="like" class="card-footer-item">Like {{value.positive}}</a>
+    <a @click="dislike" class="card-footer-item">Dislike {{value.negative}}</a>
+    <a href="#" class="card-footer-item">Comentar</a>
   </footer>
 </div>
 </template>
@@ -41,6 +26,15 @@ export default {
     name: "articleItem",
     props: {
         value: Object
-    }
+    },
+    methods: {
+      like(){
+        this.value.positive++
+      },
+       dislike(){
+        this.value.negative++
+        console.log(this.value.negative)
+      }
+    },
 }
 </script>
