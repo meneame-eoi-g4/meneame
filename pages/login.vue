@@ -1,6 +1,6 @@
 <template>
  <section>
-  <div class="form-group">
+  <div class="form-group form">
   <input
     v-model="email"
     type="email"
@@ -9,7 +9,7 @@
     @blur="hasErrors=false"
  />
   </div >
-<div class="form-group">              
+<div class="form-group form">              
   <input
     v-model="password"
     type="password"
@@ -20,7 +20,7 @@
      </div >
 
                
-  <button class="button is-warning" @click="login">Login</button>
+  <button class="button is-warning form" @click="login">Login</button>
            
   </section>
 </template>
@@ -45,7 +45,7 @@ export default {
     async login() {
       try {
 
-        this.validForm()
+       console.log('boton pulsado')
 
         const credentials = {
           email: this.email,
@@ -58,7 +58,7 @@ export default {
 
         this.$store.dispatch('login', token)
 
-        this.$router.push("/mis-pedidos")
+        this.$router.push("/index")
       } catch (error) {
         this.errorMessage = error.message
         this.hasErrors = true

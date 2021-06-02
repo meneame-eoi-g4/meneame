@@ -33,9 +33,9 @@ export const actions = {
   }, */
   login(context, token){
     if(token !== null){
-      //localStorage.setItem("jwt-token", token)
+    localStorage.setItem("jwt-token", token)
 
-      this.$cookies.set('jwt-token', token)
+      /* this.$cookies.set('jwt-token', token) */
 
       //configuro axios
       this.$api.initSession(token)
@@ -44,8 +44,8 @@ export const actions = {
     context.commit('saveToken', token)
   },
   logout(context){
-    //localStorage.removeItem("jwt-token")
-    this.$cookies.remove('jwt-token')
+    localStorage.removeItem("jwt-token")
+    /* this.$cookies.remove('jwt-token') */
 
     //configuro axios
     this.$api.closeSession()

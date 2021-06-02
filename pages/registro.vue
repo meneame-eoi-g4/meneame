@@ -1,6 +1,6 @@
 <template>
-<<<<<<< HEAD
-<div >
+
+<div class="form" >
   <div class="form-group">
     <input
     v-model="firstname"
@@ -19,7 +19,7 @@
     @blur="hasErrors=false"
  />
   </div >
-=======
+
   <div>
     <div class="form-group">
       <input
@@ -39,7 +39,7 @@
         @blur="hasErrors = false"
       />
     </div>
->>>>>>> 85e088c9823a4130df97219ff37ab158bc432c38
+
 
     <div class="form-group">
       <input
@@ -67,6 +67,7 @@
     </div>
     <button class="button is-warning" @click="login">Registrate</button>
   </div>
+   </div>
 </template>
 
 <script>
@@ -115,20 +116,7 @@ export default {
          this.$router.push("/index")
 
 
-        const newUser = {
-          firstname: this.firstname,
-          lastname: this.lastname,
-          email: this.email,
-          password: this.password,
-          avatar:
-            "https://img2.freepng.es/20180616/sxr/kisspng-avatar-computer-icons-avatar-icon-5b254abb7cf344.7556131215291706195118.jpg",
-        };
-        /* validForm(); */
-        console.log(newUser);
-        await this.$api.register.register(newUser);
-
-        this.$router.push("/bienvenido");
->>>>>>> 85e088c9823a4130df97219ff37ab158bc432c38
+       
       } catch (error) {
         this.errorMessage = error.message;
         this.hasErrors = true;
