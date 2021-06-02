@@ -49,9 +49,9 @@
           <nuxt-link v-if="!isAuth" class="button is-light"  to="/login">
             Log in
           </nuxt-link>
-          <nuxt-link v-if="isAuth" class="button is-light"  to="/login">
+          <button v-if="isAuth" class="button is-light"  @click="logout">
             Log out
-          </nuxt-link>
+          </button>
           <nuxt-link v-if="isAuth" class="button is-light"  to="/post">
            postear
           </nuxt-link>
@@ -78,6 +78,11 @@ export default {
     currentUser() {
       return this.$store.getters.currentUser
     },
+    logout() {
+      this.$store.dispatch('logout')
+
+      this.$router.push("/")
+    }
   },
 };
 </script>

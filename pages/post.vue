@@ -79,7 +79,7 @@ export default {
         };
 
         console.log(newPost);
-        await this.$api.message.send(newPost);
+        await this.$api.articles.send(newPost);
 
         this.$router.push("/index");
       } catch (error) {
