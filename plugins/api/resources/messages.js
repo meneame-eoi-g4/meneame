@@ -5,7 +5,7 @@ class Message{
 
     async send(messageData){
         try {
-            const response = await this.axios.post("messages", messageData)
+            const response = await this.axios.post("articles", messageData)
 
             return response.data
         }catch(error){

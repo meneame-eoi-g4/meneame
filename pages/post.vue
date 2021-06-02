@@ -62,13 +62,16 @@ export default {
     async post() {
       try {
         console.log("boton pulsado");
+        console.log(this.currentUser)
 
         const newPost = {
+            title:this.title,
           author: {
-            name: currentUser.firstname,
-            img: currentUser.avatar,
+            name: this.currentUser.firstname,
+            img:"carajaula"
+            /* img: this.currentUser.avatar, */
           },
-          categoria: this.categoria,
+          categories: this.categoria,
           img: this.img,
           slug: this.slug,
 
