@@ -121,20 +121,7 @@ export default {
 
        
 
-        console.log("boton pulsado");
-        const newUser = {
-          firstname: this.firstname,
-          lastname: this.lastname,
-          email: this.email,
-          password: this.password,
-          avatar:
-            "https://img2.freepng.es/20180616/sxr/kisspng-avatar-computer-icons-avatar-icon-5b254abb7cf344.7556131215291706195118.jpg",
-        };
-
-        await this.$api.register.register(newUser);
-
-        this.$router.push("/index");
-
+      
       } catch (error) {
         this.errorMessage = error.message;
         this.hasErrors = true;
