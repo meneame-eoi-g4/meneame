@@ -1,0 +1,48 @@
+.checkbox:hover, .radio:hover
+{
+ color: #FFF;
+}
+
+textarea{
+  resize: vertical;
+}
+
+.success-modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .message{
+    width: 50%;
+    height: 50%;
+    overflow-y: auto;
+  }
+}
+
+.model-color-head{
+  background-color: #101315;
+  p{
+    color: white;
+  }
+}
+
+.model-color-body{
+  background-color: gray;
+}
+
+/* Transiciones entre página (global) */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
