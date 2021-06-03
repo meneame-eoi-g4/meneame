@@ -6,12 +6,14 @@
           :value="item"
         />
       </div>
+      <coments-wall v-for="item in article" :key="item._id" :value="item.coments" @coment="coment()"/>
     </section>
   </main>
 </template>
 
 <script>
 import ArticleCard from '../../components/partials/article-card';
+import comentsWall from '../../components/comentsWall';
 export default {
 name: "Articulo",
 data(){
@@ -19,7 +21,35 @@ data(){
   }
 },
 components:{
-  ArticleCard
+  ArticleCard,
+  comentsWall
+},
+ computed: {
+   
+      currentUser() {
+      return this.$store.getters.currentUser
+      }
+    },
+methods:{
+ async coment( ){
+          try{
+            console.log('he pulsado')
+              const newComent={
+                  author: {
+                      name: this.currentUser.firstname ,
+                      img: this.currentUser.avatar|| 'https://img2.freepng.es/20180616/sxr/kisspng-avatar-computer-icons-avatar-icon-5b254abb7cf344.7556131215291706195118.jpg'
+                  },
+                  content: this.content
+              }
+              console.log(newComent)
+
+            
+             this.article[0].coments.push(newComent)
+             await this.$api.articles.coment(this.article[0]);
+          }catch(error){
+
+          }
+      }
 },
   async asyncData(context) {
     try {

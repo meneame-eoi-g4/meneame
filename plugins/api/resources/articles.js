@@ -24,6 +24,16 @@ class Article{
         }
 
     }
+    async coment(coment){
+        try {
+            
+            const response = await this.axios.put(`articles/${article._id}`,coment);
+            return response.data
+        } catch (error) {
+            
+        }
+
+    }
     async dislike(article){
         try {
             const response = await this.axios.put(`articles/${article._id}`, article);
