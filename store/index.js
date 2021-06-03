@@ -43,6 +43,8 @@ export const actions = {
 
     context.commit('saveToken', token)
   },
+ 
+  
   logout(context){
     localStorage.removeItem("jwt-token")
     /* this.$cookies.remove('jwt-token') */

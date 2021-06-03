@@ -41,6 +41,15 @@ export default {
         await this.$api.articles.dislike(this.value);
       } catch (error) {}
     },
+    coments(){
+      try {
+        this.$store.saveCurrentArticle(this.value)
+         this.$router.push("/article");
+        
+      } catch (error) {
+        
+      }
+    }
   },
 };
 </script>
