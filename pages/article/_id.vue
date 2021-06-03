@@ -20,7 +20,9 @@ import comentsWall from "../../components/comentsWall";
 export default {
   name: "Articulo",
   data() {
-    return {};
+    return {
+      content: "",
+    };
   },
   components: {
     ArticleCard,
@@ -46,7 +48,7 @@ export default {
         };
 
         article.coments.push(newComent);
-        console.log(article)
+        console.log(article);
         await this.$api.articles.coment(article);
       } catch (error) {}
     },

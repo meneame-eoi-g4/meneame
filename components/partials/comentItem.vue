@@ -4,11 +4,11 @@
       <div class="media">
         <div class="media-left">
           <figure class="image is-48x48">
-            <img v-if="value.author.img" src="value.author.img" alt="Placeholder image" />
+            
             <img
-              v-if="!value.author.img"
-              src="https://img2.freepng.es/20180616/sxr/kisspng-avatar-computer-icons-avatar-icon-5b254abb7cf344.7556131215291706195118.jpg"
-              alt="Placeholder image"
+              
+              src="https://bulma.io/images/placeholders/96x96.png"
+              alt=""
             />
           </figure>
         </div>
@@ -20,7 +20,7 @@
 
       <div class="content">
         {{ value.content }}
-        <a href="#">#css</a> <a href="#">#responsive</a>
+
         <br />
         <time datetime="2016-1-1">{{ value.date }}</time>
       </div>
