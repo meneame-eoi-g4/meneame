@@ -7,6 +7,8 @@
         />
       </div>
       <coments-wall v-for="item in article" :key="item._id" :value="item.coments" @coment="coment()"/>
+       <textarea v-model="content" class="textarea" placeholder="comenta"></textarea>
+      <button class="button is-warning" @click='coment'>coment</button>
     </section>
   </main>
 </template>
@@ -18,6 +20,7 @@ export default {
 name: "Articulo",
 data(){
   return{
+    content:"",
   }
 },
 components:{
