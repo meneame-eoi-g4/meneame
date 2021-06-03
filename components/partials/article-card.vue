@@ -16,7 +16,7 @@
     <footer class="card-footer">
       <a @click="like" class="card-footer-item">Like {{ value.positive }}</a>
       <a @click="dislike" class="card-footer-item">Dislike {{ value.negative }}</a>
-      <a href="#" class="card-footer-item">Comentar</a>
+      <a href="#" class="card-footer-item" @click.prevent="coments">Comentar</a>
     </footer>
   </div>
 </template>
@@ -43,11 +43,9 @@ export default {
     },
     coments(){
       try {
-        this.$store.saveCurrentArticle(this.value)
-         this.$router.push("/article");
-        
+        this.$router.push(`/article/${this.value._id}`);
       } catch (error) {
-        
+        console.log("cosas")
       }
     }
   },
