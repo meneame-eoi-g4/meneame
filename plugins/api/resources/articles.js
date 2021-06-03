@@ -16,21 +16,21 @@ class Article{
     }
     async like(article){
         try {
-            
+
             const response = await this.axios.put(`articles/${article._id}`,article);
             return response.data
         } catch (error) {
-            
+
         }
 
     }
     async coment(coment){
         try {
-            
-            const response = await this.axios.put(`articles/${article._id}`,coment);
+            console.log(coment)
+            const response = await this.axios.put(`articles/${coment._id}`,coment);
             return response.data
         } catch (error) {
-            
+
         }
 
     }
@@ -38,9 +38,9 @@ class Article{
         try {
             const response = await this.axios.put(`articles/${article._id}`, article);
             return response.data
-            
+
         } catch (error) {
-            
+
         }
 
     }

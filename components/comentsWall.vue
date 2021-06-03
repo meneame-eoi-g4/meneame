@@ -1,7 +1,7 @@
 <template>
  <div class="container-wrap">
       <div class="columns is-gapless is-flex is-multiline">
-        <comentitem
+        <coment-item
           v-for="(item,i) in value"
           :value="item"
           :key="i"
@@ -14,19 +14,15 @@
 <script>
 import comentItem from "@/components/partials/comentitem";
 
-
-
 export default {
   name: "mainWall",
   components: {
     comentItem
-    
-    
   },
    data() {
     return {
       content: "",
-     
+
     };
    },
   props: {
@@ -37,10 +33,10 @@ export default {
       }
     }
   },
- 
-  
+
+
   methods: {
-     
+
   },
 };
 </script>
